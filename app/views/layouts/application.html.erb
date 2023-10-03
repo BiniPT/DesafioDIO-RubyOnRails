@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Blog de Livros</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a class="logo" href="/">Meu Blog de Livros</a>
+        <ul class="nav-list">
+          <li><a href="/">Página Inicial</a></li>
+          <li><a href="/livros/new">Adicionar Livro</a></li>
+          <!-- Adicione outros links de navegação conforme necessário -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <%= Time.now.year %> Meu Blog de Livros. Todos os direitos reservados.</p>
+      <!-- Inclua informações de contato ou outros links no rodapé, se desejar -->
+    </div>
+  </footer>
+</body>
+</html>
